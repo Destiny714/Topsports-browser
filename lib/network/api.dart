@@ -33,6 +33,8 @@ String detailLink(String commodityId) {
 
 String get addCartLink => encryptedLink('/shoppingcart/new/add');
 
+String get getShoppingCartLink => encryptedLink('');
+
 class Http {
   static String baseUrl = 'https://wxmall.topsports.com.cn';
   static const int connectTimeout = 5000;
@@ -88,7 +90,7 @@ class Http {
           receiveTimeout: receiveTimeout,
           sendTimeout: sendTimeout,
         )));
-    if (response?.statusCode != 200){
+    if (response?.statusCode != 200) {
       Prefs.prefs.token = '';
     }
     return response?.data;
@@ -182,4 +184,8 @@ Future<bool> addCart({
     Fluttertoast.showToast(msg: '加入购物车出错');
     return false;
   }
+}
+
+Future<dynamic> getShoppingCart() async {
+
 }

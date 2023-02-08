@@ -6,6 +6,7 @@
 import 'package:flutter/material.dart' show debugPrint;
 import 'package:topsports/models/commodity_list_entity.dart';
 import 'package:topsports/models/good_detail_entity.dart';
+import 'package:topsports/models/shopping_cart_info_entity.dart';
 
 JsonConvert jsonConvert = JsonConvert();
 typedef JsonConvertFunction<T> = T Function(Map<String, dynamic> json);
@@ -26,6 +27,12 @@ class JsonConvert {
 		(GoodDetailData).toString(): GoodDetailData.fromJson,
 		(GoodDetailDataGroup).toString(): GoodDetailDataGroup.fromJson,
 		(GoodDetailDataSkuList).toString(): GoodDetailDataSkuList.fromJson,
+		(ShoppingCartInfoEntity).toString(): ShoppingCartInfoEntity.fromJson,
+		(ShoppingCartInfoData).toString(): ShoppingCartInfoData.fromJson,
+		(ShoppingCartInfoDataWillBuyList).toString(): ShoppingCartInfoDataWillBuyList.fromJson,
+		(ShoppingCartInfoDataWillBuyListMap).toString(): ShoppingCartInfoDataWillBuyListMap.fromJson,
+		(ShoppingCartInfoDataWillBuyListBuyCommodityVOList).toString(): ShoppingCartInfoDataWillBuyListBuyCommodityVOList.fromJson,
+		(ShoppingCartInfoDataWillBuyListBuyCommodityVOListMap).toString(): ShoppingCartInfoDataWillBuyListBuyCommodityVOListMap.fromJson,
 	};
 
   T? convert<T>(dynamic value) {
@@ -145,6 +152,24 @@ class JsonConvert {
 		}
 		if(<GoodDetailDataSkuList>[] is M){
 			return data.map<GoodDetailDataSkuList>((Map<String, dynamic> e) => GoodDetailDataSkuList.fromJson(e)).toList() as M;
+		}
+		if(<ShoppingCartInfoEntity>[] is M){
+			return data.map<ShoppingCartInfoEntity>((Map<String, dynamic> e) => ShoppingCartInfoEntity.fromJson(e)).toList() as M;
+		}
+		if(<ShoppingCartInfoData>[] is M){
+			return data.map<ShoppingCartInfoData>((Map<String, dynamic> e) => ShoppingCartInfoData.fromJson(e)).toList() as M;
+		}
+		if(<ShoppingCartInfoDataWillBuyList>[] is M){
+			return data.map<ShoppingCartInfoDataWillBuyList>((Map<String, dynamic> e) => ShoppingCartInfoDataWillBuyList.fromJson(e)).toList() as M;
+		}
+		if(<ShoppingCartInfoDataWillBuyListMap>[] is M){
+			return data.map<ShoppingCartInfoDataWillBuyListMap>((Map<String, dynamic> e) => ShoppingCartInfoDataWillBuyListMap.fromJson(e)).toList() as M;
+		}
+		if(<ShoppingCartInfoDataWillBuyListBuyCommodityVOList>[] is M){
+			return data.map<ShoppingCartInfoDataWillBuyListBuyCommodityVOList>((Map<String, dynamic> e) => ShoppingCartInfoDataWillBuyListBuyCommodityVOList.fromJson(e)).toList() as M;
+		}
+		if(<ShoppingCartInfoDataWillBuyListBuyCommodityVOListMap>[] is M){
+			return data.map<ShoppingCartInfoDataWillBuyListBuyCommodityVOListMap>((Map<String, dynamic> e) => ShoppingCartInfoDataWillBuyListBuyCommodityVOListMap.fromJson(e)).toList() as M;
 		}
 
 		debugPrint("${M.toString()} not found");

@@ -1,16 +1,12 @@
-# topsports
+# 滔博运动折扣商品浏览器
 
-topsports monitor
+<u>**基于Flutter**</u>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 仅包含nike折扣商品
+- 功能
+    - 全局搜索商品
+    - 商品列表跳页查看
+    - 查看商品详情（店铺、库存明细、最低到手价等
+    - 浏览店铺商品
+    - 商品加购物车
+    - 下单（已删除，避免恶意利用
